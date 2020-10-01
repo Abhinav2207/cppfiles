@@ -19,22 +19,22 @@ void convert(const string &str) {
     for (int i = 0; i < size; ++i) {
         char word = str[i];
 
-        if (isalnum(word)) {
-            cout << word;
-        } else if (word == '(')
-            q.push(word);
-        else if (word == ')') {
+        if (isalnum(worda)) {
+            cout << worda;
+        } else if (worda == '(')
+            q.push(worda);
+        else if (worda == ')') {
             while (!q.empty() and q.top() != '(') {
                 cout << q.top();
                 q.pop();
             }
             q.pop();
         } else {
-            while (!q.empty() and evaluate(q.top()) >= evaluate(word)) {
+            while (!q.empty() and evaluate(q.top()) >= evaluate(worda)) {
                 cout << q.top();
                 q.pop();
             }
-            q.push(word);
+            q.push(worda);
         }
     }
 
