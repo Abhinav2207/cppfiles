@@ -33,13 +33,13 @@ public:
 
 class student {
 protected:
-    int stdID, semester, *attendance{}, *marks{};
+    int stdID, semesters, *attendance{}, *marks{};
     subject *sub[6]{};
     float CGPA;
 public:
     student() {
         stdID = rand() % 100000 + 100000;
-        semester = rand() % 8 + 1;
+        semesters = rand() % 8 + 1;
         CGPA = 0.0;
     }
 
