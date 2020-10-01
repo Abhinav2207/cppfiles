@@ -17,7 +17,7 @@ void convert(const string &str) {
     stack<char> q;
 
     for (int i = 0; i < size; ++i) {
-        char word = str[i];
+        char worda = str[i];
 
         if (isalnum(worda)) {
             cout << worda;
